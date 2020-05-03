@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue js Tutorial</title>
     <script src="./libraryVue.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #e9e9e9;
+        }
+    </style>
 </head>
 <body>
     <div>Hello World</div>
-    <div id="app">{{ title }}</div>
+    <div id="app">
+        <h2>{{ title }}</h2>
+        <a v-bind:href="url" target="_blank">Link</a>
+        <div>{{ price }}</div>
+        <div>{{ count }}</div>
+        <button v-on:click="clickCount">Increase Count</button>
+        <div class="box" v-on:mousemove="handleMouseMove">
+            <p>clientX: {{clientX}}</p>
+            <p>clientY: {{clientY}}</p>
+        </div>
+        <form action="" v-on:submit="handleSubmit">
+            <label for="">first name: {{ firstName }}</label><hr>
+            <input v-model="firstName" type="text" name="firstName"><br>
+            <label for="">email: {{ email }}</label><hr>
+            <input v-model="email" type="email" name="email"><br>
+            <input v-on:keyup.enter="submit" type="submit" value="dang ky">
+        </form>
+        <div>message reverse: {{reversedMessage}}</div>
+    </div>
 </body>
 <script src="./main.js"></script>
 </html>
