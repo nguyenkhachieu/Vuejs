@@ -10,6 +10,11 @@ var vueInstance = new Vue({
         message: 'hello',
         firstName: '',
         email: '',
+        textClass: 'active',
+        isActive: true,
+        isError: true,
+        bg: 'https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/denman20200325-nasa.jpg',
+        isConditional: true,
     },
     methods: {
         clickCount() {
@@ -27,6 +32,9 @@ var vueInstance = new Vue({
     computed: { // xu ly nhung logic o template vd the div .....
         reversedMessage() {
             return this.message.split('').reverse().join('-');
+        },
+        background() {
+            return 'url(' + this.bg + ')';
         }
     },
 })

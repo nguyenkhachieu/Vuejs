@@ -16,7 +16,9 @@
 <body>
     <div>Hello World</div>
     <div id="app">
-        <h2>{{ title }}</h2>
+        <div v-bind:style="{ backgroundImage:  background, width: 50 + 'px', height: 50 + 'px'}"></div>
+        <hr>
+            <h2>{{ title }}</h2>
         <a v-bind:href="url" target="_blank">Link</a>
         <div>{{ price }}</div>
         <div>{{ count }}</div>
@@ -25,6 +27,7 @@
             <p>clientX: {{clientX}}</p>
             <p>clientY: {{clientY}}</p>
         </div>
+        <hr>
         <form action="" v-on:submit="handleSubmit">
             <label for="">first name: {{ firstName }}</label><hr>
             <input v-model="firstName" type="text" name="firstName"><br>
@@ -33,6 +36,14 @@
             <input v-on:keyup.enter="submit" type="submit" value="dang ky">
         </form>
         <div>message reverse: {{reversedMessage}}</div>
+        <br>
+        <div v-bind:class="{ active: isActive, error: isError }" class="demo">gắn class Active</div>
+        <hr>
+        <div>
+            <div>conditional</div>
+            <div v-if="isConditional"> Vue is correct </div>
+            <div v-else> oh no  </div>
+        </div>
     </div>
 </body>
 <script src="./main.js"></script>
