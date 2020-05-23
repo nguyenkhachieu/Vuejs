@@ -1,0 +1,3 @@
+1. Development
+    - Babel là trình biên dịch của javascript vd như es6 thành es5
+    - Wepback là công cụ giúp đóng gói code, đóng gói mã nguồn.
