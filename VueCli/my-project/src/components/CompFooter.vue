@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: 'comp-header',
+        name: 'comp-footer',
         data() {
             return {
                 text: 'Fotter'
